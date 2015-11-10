@@ -1,0 +1,38 @@
+<ion-header-bar align-title="center" class="bar-subheader bar-stable">
+	<h1 class="title">{{Group.groupName}}</h1>
+</ion-header-bar>
+	
+<ion-content class="content">
+	<div id="groupDescription" style="padding-bottom:10px">
+		<div class="list"> 
+			<div class="item item-divider center">Description</div>
+			<div class="item item-text-wrap">{{Group.groupDescription}}</div>
+		</div>
+	</div>
+	<div id="groupMembersGrid">
+		<div class="list"> 
+			<div class="item item-divider center">Members</div>
+			<div class="item" ng-repeat="member in members">
+				<div class="row">
+        		    <div class="col">{{member.Username}}</div>
+            		<div class="col" style="text-align:right">{{member.Position}}</div>
+        		</div>
+			</div>
+			<div class="item" ng-if="members.length == 0">No Members</div>
+		</div>
+	</div>
+		<a ng-href="#addMember" class="button button-outline button-block button-calm">+ Add Member</a>
+	<div id="groupEventsGrid">
+		<div class="list"> 
+			<div class="item item-divider center">Group Events</div>
+			<div class="item" ng-click="view(groupEvent)" ng-repeat="groupEvent in groupEvents">{{groupEvent.Name}}</div>
+			<div class="item" ng-if="groupEvents.length == 0">No Events</div>
+		</div>
+	</div>
+		<a ng-href="#groupEvent" class="button button-outline button-block button-calm">+ Add Event</a>
+	<div id="options">
+		<a id="edit" ng-href="#editGroup" class="button button-block button-positive">Edit Group</a>
+		<a id="leave" ng-click="leaveGroup()" class="button button-block button-assertive">Leave Group</a>
+	</div>
+	
+</ion-content>

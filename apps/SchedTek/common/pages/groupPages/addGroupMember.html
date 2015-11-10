@@ -1,0 +1,23 @@
+<ion-header-bar align-title="center" class="bar-subheader bar-stable">
+	<h1 class="title">Add Member</h1>
+</ion-header-bar>
+
+<ion-content class="content">
+	
+	<h3 ng-if="message">{{message}}</h3>
+	<div class="list">
+		<label class="item item-text-wrap item-inset">
+			<input class="addMember" name="memName" type="text" placeholder="Name or Username" ng-model="value.username" required></input>
+		</label>
+		<label class="item item-text-wrap item-inset">
+			<input class="addMember" name="memEmail" type="text" placeholder="Email" ng-model="email" required></input>
+		</label>
+		<select class="position-select" ng-model="value.position">
+    		<option selected>Member</option>
+    		<option>Leader</option>
+    		<option>Owner</option>
+			</select>
+	</div>
+	<a id="invite" ng-click="invite()" class="button button-block button-positive">Invite</a>
+	<a id="cancel" ng-href="#viewgroup" class="button button-block">Cancel</a>
+</ion-content>

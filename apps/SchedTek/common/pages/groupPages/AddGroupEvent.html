@@ -1,0 +1,62 @@
+<ion-header-bar align-title="center" class="bar-subheader bar-stable">
+	<h1 class="title">Add Group Event</h1>
+</ion-header-bar>
+
+<ion-content class="content">
+	<h3 ng-if="message">{{message}}</h3>
+	<div class="list list-inset">
+		<label class="item item-text-wrap item-inset">
+			<input class="createEvent" name="eventName" type="text" placeholder="Name" ng-model="gevent.name" required></input>
+		</label>
+		
+		<label class="item item-text-wrap item-inset">
+			<input class="createEvent" name="EventDesc" type="text" placeholder="Description" ng-model="gevent.description" required></input>
+		</label>
+		
+		<label class="item item-text-wrap item-inset">
+			<input class="createEvent" name="EventLoc" type="text" placeholder="Location" ng-model="gevent.location" required></input>
+		</label>
+		<div id="text" class="item item-toggle">
+			Text
+			<label class="toggle toggle-positive">
+				<input type="checkbox" ng-model="gevent.text">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+		</div>
+		
+		<div id="push" class="item item-toggle">
+			Push Notification
+			<label class="toggle toggle-positive">
+				<input type="checkbox" ng-model="gevent.push">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+		</div>
+		
+		<div id="email" class="item item-toggle">
+			Email
+			<label class="toggle toggle-positive">
+				<input type="checkbox" ng-model="gevent.email">
+				<div class="track">
+					<div class="handle"></div>
+				</div>
+			</label>
+		</div>
+		
+		<label id="date" class="item item-input">
+ 			<span class="input-label">Date</span>
+  			<input type="date" ng-model="gevent.date" required>
+		</label>
+		
+		<label id="time" class="item item-input">
+  			<span class="input-label">Time</span>
+  			<input type="time" ng-model="gevent.time" required>
+		</label>
+	
+	</div>
+	<a id="invite" ng-click="addEvent()" class="button button-block button-positive">Add</a>
+	<a id="cancel" ng-href="#viewgroup" class="button button-block">Cancel</a>
+</ion-content>

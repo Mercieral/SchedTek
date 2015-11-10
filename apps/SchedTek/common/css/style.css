@@ -1,0 +1,42 @@
+/* Empty. Add your own CSS if you like */
+/* Reset CSS */
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+	margin: 0;
+	padding: 0;
+}
+
+/* Worklight container div */
+body {
+	margin: 0 auto;
+}
+
+html, body {
+	height: 100%;
+	background-color: #E6F3FF;
+}
+
+.content {
+	padding: 20px;
+}
+
+.tab-item-active{
+	background-color: #E6E6E6;
+}
+.tab-item{
+	width: 25%;
+}
+
+.createEvent, form  {
+	display: inline;
+	
+}
+
+input{
+	width: 100%;
+}
+
+#dayGrid{
+	float: auto;
+	width: 100%;
+	
+}

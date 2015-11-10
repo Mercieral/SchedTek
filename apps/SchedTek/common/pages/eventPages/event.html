@@ -1,0 +1,20 @@
+<ion-header-bar align-title="center" class="bar-subheader bar-stable">
+<h1 class="title">My Events</h1>
+</ion-header-bar>
+<ion-content class="content">
+<h1 class="center"> Welcome {{User.firstname}} {{User.lastname}}</h1>
+</br>
+<div id="dayGrid">
+	<div class="list"> 
+		<div class="item item-divider center">Today's Events</div>
+		<div class="item item-text-wrap" ng-click="view(event)" ng-repeat="event in events"> {{event.Name}}</div>
+		<div class="item" ng-if="events.length == 0">No Events</div>
+	</div>
+</div>
+<a class="button button-block button-positive" ng-href="#createevent">Add an Event</a>
+
+<a class="button button-block button-positive" ng-href="#createtodo">Create TODO</a>
+
+<!-- This will be hidden until TODO has been created -->
+<a ng-href="#updatetodo" hidden><button>Update TODO</button></a>
+</ion-content>

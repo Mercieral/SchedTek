@@ -1,0 +1,19 @@
+<ion-header-bar align-title="center" class="bar-subheader bar-stable">
+	<h1 class="title">My Groups</h1>
+</ion-header-bar>
+
+<ion-content class="content">
+
+<h3 ng-if="message">{{message}}</h3>
+<div class="list list-inset">
+	<label class="item item-text-wrap item-inset">
+		<input class="createGroup" name="groupName" type="text" placeholder="Name" ng-model="Group.groupName" required></input>
+	</label>
+	<label class="item item-text-wrap item-inset">
+		<input class="createGroup" name="GroupDesc" type="text" placeholder="Description" ng-model="Group.groupDescription" required></input>
+	</label>
+</div>
+<a id="save" ng-click="editGroup()" class="button button-block button-positive">Save Group</a>
+<a id="delete" ng-click="deleteGroup()" class="button button-block button-assertive">Delete Group</a>
+<a id="cancel" ng-href="#viewgroup" class="button button-block">Cancel</a>
+</ion-content>

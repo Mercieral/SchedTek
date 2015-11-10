@@ -1,0 +1,33 @@
+<ion-header-bar align-title="center" class="bar-subheader bar-stable">
+<h1 class="title">My Calendar</h1>
+</ion-header-bar>
+<ion-content class="content">
+
+<div class="grid">
+<div class="row">
+<button id="left" ng-click="prevYear()" class="pull-left button" style="display:inline;">Left</button>
+<h2 id="yearp" class="col center">{{curyear}}</h2>
+<button id="right" ng-click="nextYear()" class="pull-right button" style="display:inline;">Right</button><br/>
+</div>
+<div class="row">
+<a ng-href="#calendar/month/{{curyear}}-01-01" class="col button"> January</a>
+<a ng-href="#calendar/month/{{curyear}}-02-01" class="col button"> February</a>
+<a ng-href="#calendar/month/{{curyear}}-03-01" class="col button"> March</a>
+</div>
+<div class="row">
+<a ng-href="#calendar/month/{{curyear}}-04-01" class="col button"> April</a>
+<a ng-href="#calendar/month/{{curyear}}-05-01" class="col button"> May</a>
+<a ng-href="#calendar/month/{{curyear}}-06-01" class="col button"> June</a>
+</div>
+<div class="row">
+<a ng-href="#calendar/month/{{curyear}}-07-01" class="col button"> July</a>
+<a ng-href="#calendar/month/{{curyear}}-08-01" class="col button"> August</a>
+<a ng-href="#calendar/month/{{curyear}}-09-01" class="col button"> September</a>
+</div>
+<div class="row">
+<a ng-href="#calendar/month/{{curyear}}-10-01" class="col button"> October</a>
+<a ng-href="#calendar/month/{{curyear}}-11-01" class="col button"> November</a>
+<a ng-href="#calendar/month/{{curyear}}-12-01" class="col button"> December</a>
+</div>
+</div>
+</ion-content>

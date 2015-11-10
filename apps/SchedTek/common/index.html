@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="lib/pickadate/angular-pickadate.css" rel="stylesheet">
+    <link href="css/ionicons.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/bower_components/angular-route/angular-route.js"></script>
+    <script src="lib/pickadate/angular-pickadate.js"></script>
+    
+    <script>
+    console.log("Setting jQuery from WL");
+    window.$ = window.jQuery = WLJQ; </script>
+
+    <!-- main app js -->
+    <script src="js/app.js"></script>
+    <script src="js/wlInit.js"></script>
+     <script src="js/controllers/mainscreen.js"></script>
+     
+    <!-- services -->
+    <script src="js/services/user.js"></script>
+    <script src="js/services/event.js"></script>
+    <script src="js/services/group.js"></script>
+  
+  	<!-- controllers -->
+  	<script src="js/controllers/eventControllers/event.js"></script>
+  	<script src="js/controllers/eventControllers/addevent.js"></script>
+  	<script src="js/controllers/eventControllers/editevent.js"></script>
+  	<script src="js/controllers/eventControllers/viewevent.js"></script>
+  	<script src="js/controllers/settingsControllers/settings.js"></script>
+  	<script src="js/controllers/settingsControllers/account.js"></script>
+  	<script src="js/controllers/CalendarControllers/calendar.js"></script>
+  	<script src="js/controllers/CalendarControllers/year.js"></script>
+  	<script src="js/controllers/CalendarControllers/day.js"></script>
+  	<script src="js/controllers/GroupControllers/group.js"></script>
+  	<script src="js/controllers/GroupControllers/viewgroup.js"></script>
+  	<script src="js/controllers/GroupControllers/editgroup.js"></script>
+  	<script src="js/controllers/GroupControllers/invite.js"></script>
+  	<script src="js/controllers/GroupControllers/addgroupevent.js"></script>
+  	<script src="js/controllers/GroupControllers/addgroup.js"></script>
+  	
+    <script src="js/controllers/login.js"></script>
+    <script src="js/controllers/register.js"></script>
+    
+    
+  </head>
+  <body ng-controller="MainscreenController">
+  
+      <ion-header-bar align-title="center" class="bar bar-header bar-calm">
+        <h1 class="title">SchedTek</h1>
+      </ion-header-bar>
+      
+      <ion-pane>
+     	 <div ng-view></div>
+		 <ion-footer-bar>
+			<div ng-show="showTabs" class="tabs tabs-icon-top">
+				<a class="tab-item" ng-href="#calendar/month/{{curdate}}" id="calendarTab" ng-click="tabSelect('calendarTab')">
+					Calendar
+					<div class="ion-ios-calendar-outline" style="font-size: 30px;"></div>
+				</a>
+				<a class="tab-item" ng-href="#group" id="groupTab" ng-click="tabSelect('groupTab')">
+					Groups
+					<div class="ion-ios-people" style="font-size: 30px;"></div>
+				</a> 
+				<a class="tab-item tab-item-active" ng-href="#event" id="eventTab" ng-click="tabSelect('eventTab')">
+					Events
+					<div class="ion-ios-list" style="font-size: 30px;"></div>
+				</a>
+				<a class="tab-item" ng-href="#settings" id="settingsTab" ng-click="tabSelect('settingsTab')">
+					Settings
+					<div class="ion-ios-gear" style="font-size: 30px;"></div>
+				</a>
+			</div>
+		</ion-footer-bar>
+      </ion-pane>
+    	
+  </body>
+</html>

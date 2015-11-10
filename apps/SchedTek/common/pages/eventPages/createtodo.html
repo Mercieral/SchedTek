@@ -1,0 +1,55 @@
+<ion-header-bar align-title="center" class="bar-subheader bar-stable">
+<h1 class="title">Create TODO</h1>
+</ion-header-bar>
+
+<ion-content class="content">
+
+<div>
+	<ul class="list">
+	  <li class="item item-checkbox">
+	     Include Tomorrow's Events
+	     <label class="checkbox">
+	       <input type="checkbox">
+	     </label>
+	  </li>
+	</ul>
+</div>
+
+<div id="weekView">
+	<div class="list"> 
+		<div class="row">
+		  <div class="col col-5"></div>
+		  <div class="col col-15">Sun</div>
+		  <div class="col col-15">Mon</div>
+		  <div class="col col-15">Tue</div>
+		  <div class="col col-15">Wed</div>
+		  <div class="col col-15">Thu</div>
+		  <div class="col col-15">Fri</div>
+		  <div class="col col-15">Sat</div>
+		</div>
+		WEEK VIEW NEEDS TO GO HERE
+	</div>
+</div>
+
+<label class="item item-input item-select">
+    <div class="input-label">
+      Notify me by
+    </div>
+    <select id="notificationType">
+			<option selected>Text</option>
+			<option>Push Notification</option>
+			<option>Email</option>
+			<option>None</option>
+	</select>
+</label>
+
+<label id="time" class="item item-input">
+  <span class="input-label">At</span>
+  <input type="time">
+</label>
+
+<a class="button button-block button-positive" ng-href="#event">Create</a>
+
+<a class="button button-block" ng-href="#event">Cancel</a>
+
+</ion-content>

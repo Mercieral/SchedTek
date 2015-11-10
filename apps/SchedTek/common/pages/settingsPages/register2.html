@@ -1,0 +1,25 @@
+<div class="modal">
+	<ion-header-bar align-title="center" class="bar bar-header bar-calm">
+		<h1 class="title">Register</h1>
+	</ion-header-bar>
+	<ion-content has-header="true">
+	<div >
+		<div class="list">
+			<div>
+				<h2 class="icon ion-checkmark-circled"> Validate Email</h2>
+				<p> if the email does not arrive in 5 minutes, check your junk mail folder or...
+				<button class="button-outline button-calm">re-send</button>
+			</div>
+			<div>
+				<h2 class="icon ion-checkmark-circled"> Validate Phone</h2>
+				<p> Please input the 4-digit code send to **Phone Number**
+				<input type="text" ng-model="phone" id="phonevalfield"><button class="button-outline button-calm">resend</button>
+			</div>
+			<div class="padding">
+				<a ng-href="#event"><button class="button button-outline button-calm ion-log-in"> Register</button></a>
+				<a ng-href="#login"><button class="button button-outline button-calm">Cancel</button></a>
+			</div>
+		</div>
+	</div>
+	</ion-content>
+</div>

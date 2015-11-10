@@ -1,0 +1,30 @@
+<ion-header-bar align-title="center" class="bar-subheader bar-stable">
+	<h1 class="title">Add Alert</h1>
+	<h3> Event: {{Event.eventName}} </h3>
+</ion-header-bar>
+
+<ion-content class="content">
+	<h3 ng-if="message">{{message}}</h3>
+	<div class="list list-inset">
+		<label id="date" class="item item-input">
+  			<span class="input-label">Date</span>
+  			<input type="date" ng-model="alert.date" required>
+		</label>
+		<label id="time" class="item item-input">
+ 			<span class="input-label">Time</span>
+  			<input type="time" ng-model="alert.time" required>
+		</label>
+		<label class="item item-input item-select">
+    		<div class="input-label">
+     			Type:  
+   				<select id="notificationType">
+					<option selected>Text</option>
+					<option>Push Notification</option>
+					<option>Email</option>
+				</select>
+			</div>
+		</label>
+	</div>
+	<a id="add" ng-click="addAlert()" class="button button-block button-positive">Add</a>
+	<a id="cancel" ng-href="#viewevent" class="button button-block">Cancel</a>
+</ion-content>

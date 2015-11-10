@@ -1,0 +1,20 @@
+<ion-header-bar align-title="center" class="bar-subheader bar-stable">
+<h1 class="title">My Calendar</h1>
+</ion-header-bar>
+<ion-content class="content">
+<div class="grid">
+<div class="row">
+<button id="left" ng-click="prevDay()" class="pull-left button" style="display:inline;">Left</button>
+<h2 id="yearp" class="col center">{{message}}</h2>
+<button id="right" ng-click="nextDay()" class="pull-right button" style="display:inline;">Right</button><br/>
+</div>
+</div>
+<div id="dayGrid">
+	<div class="list"> 
+		<div class="item item-divider center">Events</div>
+		<div class="item item-text-wrap" ng-repeat="event in events" ng-click="view(event)"> {{event.Name}}</div>
+		<div class="item item-text-wrap" ng-if="events.length == 0">No Events</div>
+	</div>
+</div>
+<a ng-href="#calendar/month/{{date.getFullYear()}}-{{date.getMonth()+1}}-1" class="button button-block">Back to Month</a>
+</ion-content>
