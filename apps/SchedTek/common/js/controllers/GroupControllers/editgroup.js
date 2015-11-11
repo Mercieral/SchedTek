@@ -4,6 +4,10 @@ App.controller('editGroupController', ['$scope', '$location', 'SharedUserService
 	
 	$scope.editGroup = function(){
 		console.log("edit");
+		if($scope.Group.groupName==null || $scope.Group.groupName==null){
+			$scope.message = "Please Try Again";
+			return;
+		}
 		console.log($scope.Group.groupID);
 		var invocationData = {
 				adapter : 'SchedTekDB',

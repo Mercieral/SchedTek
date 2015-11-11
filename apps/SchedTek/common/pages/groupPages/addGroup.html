@@ -2,12 +2,13 @@
 <h1 class="title">Add Group</h1>
 </ion-header-bar>
 <ion-content class="content">
+<h3 ng-if="message">{{message}}</h3>
 <div class="list list-inset">
 	<label class="item item-text-wrap item-inset">
-		<input class="createGroup" name="GroupName" id="name" type="text" placeholder="Name" required></input>
+		<input class="createGroup" name="GroupName" ng-model="gname" id="name" type="text" placeholder="Name" required></input>
 	</label>
 	<label class="item item-text-wrap item-inset">
-		<input class="createGroup" name="GroupDesc" id="desc" type="text" placeholder="Description" required></input>
+		<input class="createGroup" name="GroupDesc" ng-model="gdesc" id="desc" type="text" placeholder="Description" required></input>
 	</label>
 
 	<label class="item item-text-wrap item-inset">
