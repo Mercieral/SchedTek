@@ -45,6 +45,7 @@ Temporary Items
 /*
 /*/
 !/apps/
+/apps/SchedTek/Android
 !adapters/
 !server/
 !services/
