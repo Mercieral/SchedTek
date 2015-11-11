@@ -8,9 +8,17 @@ App.controller('registerController', ['$scope', '$location', 'SharedUserService'
 		$scope.formData.first = '';
 		$scope.formData.last = '';
 		$scope.formData.phone = '';
+		$scope.PassError = '';
 		
 		
 		$scope.continuereg = function(){
+			
+			if ($scope.formData.regpassword != $scope.formData.passwordConfirm){
+				console.log("error");
+				$scope.PassError = "Password did not match";
+				return;
+			}
+			
 			var regData = {
 				adapter : 'SchedTekDB',
 				procedure : 'regSProc',
