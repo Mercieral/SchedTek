@@ -1,8 +1,11 @@
 App.controller('addEventController', ['$scope', '$location', 'SharedUserService', function($scope, $location, SharedUserService){
 	$scope.User = SharedUserService;
 	var cdt = new Date();
+	cdt.setHours(17);
+	cdt.setMinutes(0);
+	cdt.setSeconds(0);
 	$scope.message = null;
-	$scope.event = {name: null, description: null, location: null, text: false, push: false, email: false, date: cdt, time: null};
+	$scope.event = {name: null, description: null, location: null, text: false, push: false, email: false, date: cdt, time: cdt};
 	
 	$scope.addEvent = function(){
 		if($scope.event.name==null || $scope.event.description==null || $scope.event.location == null || $scope.event.time == null){
