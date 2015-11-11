@@ -54,7 +54,20 @@ App.controller('viewGroupController', ['$scope', '$location', 'SharedUserService
 				procedure : 'leaveGroup',
 				parameters : [$scope.User.userID, $scope.Group.groupID]
 		};
-	};
+		WL.Client.invokeProcedure(invocationData,{
+			onSuccess : leaveGroupSuccess,
+			onFailure : leaveGroupFailure
+		})
+	}
+		
+	function leaveGroupSuccess(result){
+		$location.path("/group");
+		$scope.$apply();
+		}
+	
+	function leaveGroupFailure(result){
+		WL.Logger.error("Leave failure");
+	}
 	
 	$scope.view = function(event){
 		$scope.Event.eventID = event.EventID;
