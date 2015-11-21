@@ -24,7 +24,7 @@ App.controller('editEventController', ['$scope', '$location', 'SharedUserService
 		var Data = {
 				adapter : 'SchedTekDB',
 				procedure : 'editEvent',
-				parameters : [$scope.Event.eventID, $scope.Event.eventName, $scope.Event.eventDescription, $scope.Event.eventLocation, dateTime]
+				parameters : [$scope.Event.eventID, $scope.Event.eventName, $scope.Event.eventDescription, $scope.Event.eventLocation, dateTime, $scope.Event.eventText, $scope.Event.eventPush, $scope.Event.eventEmail]
 		};
 
 		WL.Client.invokeProcedure(Data,{

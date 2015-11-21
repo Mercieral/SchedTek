@@ -20,17 +20,16 @@ function regSProc(email, username, password, first, last, phone){
 	});
 }
 
-function addEvent(username, name, description, location, dateTime){
+function addEvent(username, name, description, location, dateTime, text, push, email){
 	return WL.Server.invokeSQLStoredProcedure({
 		procedure: "addEvent",
-		parameters: [username, name, description, location, dateTime]
+		parameters: [username, name, description, location, dateTime, text, push, email]
 	});
 }
 
-function editEvent(id, name, description, location, dateTime){
-	return WL.Server.invokeSQLStoredProcedure({
+function editEvent(id, name, description, location, dateTime, text, push, email){	return WL.Server.invokeSQLStoredProcedure({
 		procedure: "editEvent",
-		parameters: [id, name, description, location, dateTime]
+		parameters: [id, name, description, location, dateTime, text, push, email]
 	});
 }
 
